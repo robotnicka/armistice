@@ -1,0 +1,26 @@
+/*!
+Theme Name: Peculiar Crossroads
+Theme URI: http://www.emilymentrek.com
+Author: Emily Mentrek
+Author URI: http://www.emilymentrek.com
+Description: A custom theme for the Armistice Arcane games, lovingly built for Peculiar Crossroads Productions by Emily Mentrek.
+Version: 1.0.0
+License:
+License URI: LICENSE
+Text Domain: armistice arcane
+Tags: custom-background, custom-logo, custom-menu, featured-images
+
+peculiar-crossroads is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+@import "neat";
+@import 'variables';
+@import 'grid-settings';
+@import 'normalize';
+@import 'form';
+@import 'menu';
+@import 'footer';
+@import 'other';

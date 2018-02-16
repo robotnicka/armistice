@@ -1,0 +1,346 @@
+.site-info {
+    text-transform: uppercase;
+}
+
+.date-container {
+    font-family: $standard;
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 20px;
+}
+
+.wp-custom-header iframe,
+.wp-custom-header img,
+.wp-custom-header video {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.sponsors-footer {
+    border-bottom: 1px solid $robin-egg;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    padding-top: 30px;
+    text-align: center;
+    background-color: $charcoal;
+
+    h2 {
+        font-size: 24px;
+        color: $blush;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+    }
+}
+
+.site-header {
+    background-color: $charcoal;
+    padding-top: 45px;
+
+    a {
+        color: $blush;
+    }
+
+    color: $blush;
+}
+
+img.alignleft {
+    float: left;
+    margin-right: 20px;
+}
+
+.site-title {
+    font-size: 48px;
+    font-family: $standard;
+    margin-top: 0;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 0;
+
+    @include grid-media($tablet-landscape) {
+        font-size: 72px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.site-branding {
+    img {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+}
+
+.site-description {
+    font-family: $standard;
+    font-style: italic;
+    margin-top: 0;
+    margin-left: 75px;
+    margin-right: 75px;
+    font-size: 22px;
+    font-weight: normal;
+
+    @include grid-media($tablet-landscape) {
+        font-size: 36px;
+    }
+}
+
+#wp-a11y-speak-polite {
+    visibility: hidden;
+    font-size: 0;
+}
+
+.video-container {
+    width: 100%;
+    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+
+    iframe {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
+    }
+}
+
+.intro__text {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 46px;
+
+    @include grid-media($tablet-landscape) {
+        font-size: 36px;
+        line-height: 50px;
+    }
+}
+
+.home {
+    .ul1 {
+        line-height: 30px;
+
+        li {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+body {
+    font-family: $belle;
+    background-color: $robin-egg;
+    color: $charcoal;
+    font-size: 20px;
+
+    @include grid-media($tablet-landscape) {
+        font-size: 24px;
+    }
+}
+
+.site-main {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 240px;
+
+    @include grid-media($tablet) {
+        width: 80%;
+    }
+
+    @include grid-media($tablet-landscape) {
+        width: 60%;
+    }
+
+    p {
+        line-height: 32px;
+    }
+}
+
+.row {
+    width: 100%;
+    background-color: $charcoal;
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.site-header-top {
+    @include grid-container;
+    padding-bottom: 5px;
+}
+
+.site-branding {
+    @include grid-media($desktop) {
+        width: 70%;
+        float: left;
+    }
+}
+
+.book-now {
+    @include grid-container;
+    margin-top: 35px;
+    text-align: center;
+    padding-bottom: 20px;
+
+    @include grid-media($desktop) {
+        width: 30%;
+        float: left;
+        text-align: right;
+        padding-bottom: 0;
+    }
+
+    a {
+        color: $dandelion;
+        text-decoration: none;
+    }
+}
+
+hr {
+    height: 1px;
+    background-color: $charcoal;
+    opacity: .5;
+    border: 0;
+    margin: 4rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $standard;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h1.entry-title {
+    position: relative;
+    font-family: $standard;
+    font-style: italic;
+
+    span {
+        position: relative;
+        background-color: $robin-egg;
+        z-index: 1;
+        padding-right: 25px;
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $charcoal;
+        content: '';
+    }
+}
+
+.home.entry-header {
+    margin-top: 226px;
+}
+
+.entry-header {
+    margin-top: 156px;
+}
+
+.button-book-now {
+    display: inline-block;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    // border: 3px solid $dandelion;
+    background-color: #b91010;
+    padding: 20px 40px;
+    color: #fff;
+    font-family: $josie;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+
+    @include grid-media($tablet-landscape) {
+        margin-right: 75px;
+    }
+
+    &:hover {
+        // border: 3px solid $dark-dandelion;
+        background-color: #da2e2e;
+        color: #fff;
+    }
+}
+
+.block {
+    text-align: center;
+    font-family: $josie;
+    font-size: 18px;
+
+    @include grid-media($tablet) {
+        float: left;
+        width: 50%;
+    }
+
+    @include grid-media($desktop) {
+        width: 25%;
+    }
+
+    &.text {
+        background-color: $charcoal;
+        color: $robin-egg;
+    }
+}
+
+.pic-1 {
+    padding-bottom: percentage(300 / 350);
+    height: 0;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+a {
+    color: $mint;
+}
+
+.block.text {
+    div {
+        padding: 30px;
+        line-height: 28px;
+    }
+
+    &.light {
+        background-color: $robin-egg;
+        color: $charcoal;
+    }
+}
+
+.block.text.date {
+    font-family: $standard;
+    font-size: 36px;
+    line-height: 18px;
+
+    div {
+        padding-top: 50px;
+    }
+
+    hr {
+        background-color: #ccc;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

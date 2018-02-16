@@ -1,0 +1,54 @@
+// Form styles
+
+fieldset {
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    legend {
+        font-family: $standard;
+        font-style: italic;
+    }
+
+    textarea {
+        margin-bottom: 20px;
+    }
+}
+
+span.wpcf7-form-control {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.wpcf7-submit {
+    display: inline-block;
+    font-family: $josie;
+    text-transform: uppercase;
+    border: 3px solid $charcoal;
+    padding: 15px 30px;
+    color: $charcoal;
+    background-color: transparent;
+}
+
+span.wpcf7-not-valid-tip {
+    color: $vitae;
+    background-color: #ffc7c7;
+    padding-left: 10px;
+}
+
+textarea,
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
+    @include grid-media($tablet-landscape) {
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+fieldset {
+    padding: 30px;
+}
+
+label {
+    display: block;
+}

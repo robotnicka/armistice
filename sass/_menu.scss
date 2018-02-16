@@ -1,0 +1,166 @@
+.main-navigation {
+    @include grid-container;
+
+    ul {
+        @include grid-container;
+		list-style: none;
+		// display: none;
+
+		@include grid-media($tablet-landscape) {
+			display: inline-block;
+		}
+
+		ul {
+			background-color: $charcoal;
+			padding-top: 15px;
+			padding-right: 29px;
+			padding-left: 29px;
+			margin-left: -29px;
+
+			@include grid-media($tablet-landscape) {
+				float: left;
+				position: absolute;
+				top: 100%;
+				left: -999em;
+				z-index: 99999;
+				padding-top: 33px;
+				padding-right: 29px;
+				padding-bottom: 33px;
+				padding-left: 29px;
+				margin-left: -29px;
+				width: 250px;
+			}
+
+			ul {
+				@include grid-media($tablet-landscape) {
+					left: -999em;
+					top: 0;
+				}
+			}
+
+			li {
+				+ li {
+					padding-top: 15px;
+				}
+
+				&:hover > ul,
+				&.focus > ul {
+					@include grid-media($tablet-landscape) {
+						left: 100%;
+						width: 250px;
+					}
+				}
+			}
+
+			a {
+				@include grid-media($tablet-landscape) {
+					width: 200px;
+				}
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		text-align: left;
+		position: relative;
+
+		@include grid-media($tablet-landscape) {
+    		float: left;
+		}
+	}
+
+	a {
+		//display: block;
+		text-decoration: none;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+// 	.nav-menu {
+// 		.sub-menu {
+// 			.sub-menu {
+// 				margin-top: -33px;
+// 			}
+// 		}
+// 	}
+
+	.nav-menu {
+		display: none;
+
+		&[aria-expanded="true"] {
+			display: inline-block;
+		}
+
+		@include grid-media($tablet-landscape) {
+			display: inline-block;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+
+	}
+}
+
+.menu-primary-container {
+	padding-bottom: 20px;
+
+	@include grid-media($tablet-landscape) {
+		padding-bottom: 0;
+	}
+}
+
+.menu-toggle {
+	border: 3px solid $robin-egg;
+	padding: 10px 20px;
+	color: $robin-egg;
+	background-color: transparent;
+	margin-top: 20px;
+
+	@include grid-media($tablet-landscape) {
+		display: none;
+	}
+}
+
+.main-navigation {
+    @include grid-container;
+    border-top: 1px solid #5C777B;
+    text-align: center;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        margin: 0 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
+
+        @include grid-media($tablet-landscape) {
+            display: inline-block;
+            font-size: 21px;
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
