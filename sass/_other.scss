@@ -159,6 +159,16 @@ body {
     p {
         line-height: 32px;
     }
+
+    .gallery-caption {
+        p {
+            line-height: normal;
+        }
+    }
+}
+
+.gallery-caption {
+    font-size: 1rem;
 }
 
 .row {
