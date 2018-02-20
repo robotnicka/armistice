@@ -24,8 +24,8 @@
 	if ( is_front_page() ) : ?>
 	<div class="row">
 		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic1.jpg"/></div></div>
-		<div class="block text date"><div><hr><p>January 5–7</p>
-		<p><em>New Orleans</em></p><hr></div></div>
+		<div class="block text date"><div><hr><p><?php echo get_theme_mod( 'armistice_date_text', 'default_value' ); ?></p>
+		<p><em><?php echo get_theme_mod( 'armistice_location_text', 'default_value' ); ?></em></p><hr></div></div>
 		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic2.jpg"/></div></div>
 			<div class="block text light"><div><p>“THE ATTENTION TO DETAIL AND RELATIONSHIPS BETWEEN CHARACTERS CAUSE IT TO STAND APART FROM OTHER EVENTS!”</p>— ROBERT</div></div></div>
 	<div class="row">
