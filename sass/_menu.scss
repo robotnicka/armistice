@@ -39,6 +39,9 @@
 			}
 
 			li {
+				float: none;
+    			display: block;
+
 				+ li {
 					padding-top: 15px;
 				}
