@@ -25,6 +25,7 @@
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#292629">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css?family=Bellefair|Josefin+Sans|Old+Standard+TT:400,400i" rel="stylesheet">
 	<?php wp_head(); ?>
