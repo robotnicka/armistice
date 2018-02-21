@@ -179,6 +179,12 @@ body {
     width: 100%;
     background-color: $charcoal;
 
+    @include grid-media($tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
     &::after {
         content: "";
         display: table;
@@ -291,15 +297,19 @@ h1.entry-title {
 .block {
     text-align: center;
     font-family: $josie;
-    font-size: 18px;
 
     @include grid-media($tablet) {
         float: left;
         width: 50%;
     }
 
+    @include grid-media($tablet-landscape) {
+
+    }
+
     @include grid-media($desktop) {
         width: 25%;
+        font-size: 18px;
     }
 
     &.text {
@@ -348,8 +358,18 @@ a {
     font-size: 36px;
     line-height: 18px;
 
+    @include grid-media($tablet-landscape) {
+        hr + p {
+            line-height: 36px;
+        }
+    }
+
     div {
         padding-top: 50px;
+
+        @include grid-media($desktop) {
+            padding-top: 30px;
+        }
     }
 
     hr {
