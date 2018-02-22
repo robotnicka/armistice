@@ -15,9 +15,9 @@
 	<div class="sponsors-footer">
 		<h2>Support our sponsors!</h2>
 		<ul>
-			<li><a href="https://auntsallys.com/" target="_blank">Aunt Sally’s</a></li>
-			<li><a href="https://www.historicalemporium.com/" target="_blank">Historical Emporium</a></li>
-			<li><a href="http://cosmangacraft.com/news/detail/collectible-cards-now-also-for-larpers?page=1" target="_blank">Cosmangacraft.com</a></li>
+			<li><a href="https://auntsallys.com/" target="_blank" rel="noopener">Aunt Sally’s</a></li>
+			<li><a href="https://www.historicalemporium.com/" target="_blank" rel="noopener">Historical Emporium</a></li>
+			<li><a href="http://cosmangacraft.com/news/detail/collectible-cards-now-also-for-larpers?page=1" target="_blank" rel="noopener">Cosmangacraft.com</a></li>
 		</ul>
 	</div>
 	<?php
@@ -43,7 +43,7 @@
 		<div class="site-info">
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '&copy; %1$s | Website by %2$s.', 'armistice' ), 'Armistice Arcane and <a href="http://peculiarcrossroads.com" target="_blank">Peculiar Crossroads Productions</a>', '<a href="http://emilymentrek.com/" target="_blank">Emily</a>' );
+				printf( esc_html__( '&copy; %1$s | Website by %2$s.', 'armistice' ), 'Armistice Arcane and <a href="http://peculiarcrossroads.com" target="_blank"  rel="noopener">Peculiar Crossroads Productions</a>', '<a href="http://emilymentrek.com/" target="_blank">Emily</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
