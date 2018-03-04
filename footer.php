@@ -23,13 +23,12 @@
 	<?php
 	if ( is_front_page() ) : ?>
 	<div class="row">
-		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic1.jpg"/></div></div>
+		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/frannyryan.jpg"/></div></div>
 		<div class="block text date"><div><hr><p><?php echo get_theme_mod( 'armistice_date_text', 'default_value' ); ?></p>
 		<p><em><?php echo get_theme_mod( 'armistice_location_text', 'default_value' ); ?></em></p><hr></div></div>
 		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic2.jpg"/></div></div>
 			<div class="block text light"><div><p>“THE ATTENTION TO DETAIL AND RELATIONSHIPS BETWEEN CHARACTERS CAUSE IT TO STAND APART FROM OTHER EVENTS!”</p>— ROBERT</div></div></div>
 	<div class="row">
-
 
 		<div class="block text"><div><p>“THEY OFFER AN INTRIGUING, FUN EXPERIENCE FOR BOTH THE EXPERIENCED ROLEPLAYER OR THE TRUE  REDSHIRT BEGINNER.”</p>— BRANTLY</div></div>
 		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic4.jpg"/></div></div>
