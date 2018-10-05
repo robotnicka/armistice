@@ -17,19 +17,29 @@
 	max-width: 100%;
 }
 
-.wp-custom-header img {
-    width: 100%;
-}
-
-.site-header {
+.sponsors-footer {
+    border-bottom: 1px solid $robin-egg;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    padding-top: 30px;
+    text-align: center;
     background-color: $charcoal;
-    padding-top: 45px;
 
-    a {
+    h2 {
+        font-size: 24px;
         color: $blush;
     }
 
-    color: $blush;
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+    }
 }
 
 img.alignleft {
@@ -54,13 +64,6 @@ img.alignleft {
     }
 }
 
-.site-branding {
-    img {
-        margin-left: 75px;
-        margin-right: 75px;
-    }
-}
-
 .site-description {
     font-family: $standard;
     font-style: italic;
@@ -77,7 +80,6 @@ img.alignleft {
 
 #wp-a11y-speak-polite {
     visibility: hidden;
-    font-size: 0;
 }
 
 .video-container {
@@ -138,50 +140,22 @@ body {
     p {
         line-height: 32px;
     }
-
-    .gallery-caption {
-        p {
-            line-height: normal;
-        }
-    }
 }
 
-.gallery-caption {
-    font-size: 1rem;
-}
+.row {
+    width: 100%;
+    background-color: $charcoal;
 
-.mfp-title {
-    line-height: normal;
-}
-
-.site-header-top {
-    @include grid-container;
-    padding-bottom: 5px;
-}
-
-.site-branding {
-    @include grid-media($desktop) {
-        width: 70%;
-        float: left;
-    }
-}
-
-.book-now {
-    @include grid-container;
-    margin-top: 35px;
-    text-align: center;
-    padding-bottom: 20px;
-
-    @include grid-media($desktop) {
-        width: 30%;
-        float: left;
-        text-align: right;
-        padding-bottom: 0;
+    @include grid-media($tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
-    a {
-        color: $dandelion;
-        text-decoration: none;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }
 
@@ -256,6 +230,72 @@ h1.entry-title {
     }
 }
 
+.block {
+    text-align: center;
+    font-family: $josie;
+    font-size: 18px;
+
+    @include grid-media($tablet) {
+        width: 50%;
+    }
+
+    @include grid-media($desktop) {
+        width: 25%;
+    }
+
+    &.text {
+        background-color: $charcoal;
+        color: $robin-egg;
+    }
+}
+
+.pic-1 {
+    padding-bottom: percentage(300 / 350);
+    height: 0;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
 a {
     color: $mint;
+}
+
+.block.text {
+    div {
+        padding: 30px;
+        line-height: 28px;
+    }
+
+    &.light {
+        background-color: $robin-egg;
+        color: $charcoal;
+    }
+}
+
+.block.text.date {
+    font-family: $standard;
+    font-size: 36px;
+    line-height: 18px;
+
+    div {
+        padding-top: 50px;
+    }
+
+    hr {
+        background-color: #ccc;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
