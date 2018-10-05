@@ -1,0 +1,43 @@
+// Site header
+
+.site-header-top {
+    @include grid-container;
+    padding-bottom: 5px;
+}
+
+.site-branding {
+    @include grid-media($desktop) {
+        width: 70%;
+        float: left;
+    }
+}
+
+.site-header {
+    background-color: $charcoal;
+    padding-top: 18px;
+
+    a {
+        color: $blush;
+    }
+
+    color: $blush;
+}
+
+.book-now {
+    @include grid-container;
+    margin-top: 35px;
+    text-align: center;
+    padding-bottom: 20px;
+
+    @include grid-media($desktop) {
+        width: 30%;
+        float: left;
+        text-align: right;
+        padding-bottom: 0;
+    }
+
+    a {
+        color: $dandelion;
+        text-decoration: none;
+    }
+}
