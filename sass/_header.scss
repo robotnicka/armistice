@@ -12,20 +12,72 @@
     }
 }
 
+.button-flourish-container {
+    display: inline-block;
+    width: 43px;
+    height: 41px;
+    fill: $dandelion;
+    vertical-align: middle;
+    
+    &--first {
+        margin-right: 8px;
+        
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+    
+    &--last {
+        margin-left: 8px;
+        
+        svg {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.button-book-now {
+    display: inline-block;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    background-color: #b91010;
+    padding: 20px 40px;
+    color: #fff;
+    font-family: $josie;
+    font-weight: normal;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 16px;
+
+    &:hover {
+        background-color: #da2e2e;
+        color: #fff;
+    }
+}
+
+.site-header-top {
+    @include grid-media($tablet-landscape) {
+        margin-right: 65px;
+    }
+}
+
 .site-header {
     background-color: $charcoal;
     padding-top: 18px;
+    color: $blush;
 
     a {
         color: $blush;
     }
-
-    color: $blush;
+    
+    img {
+        width: 212px;
+        height: 76px;
+    }
 }
 
 .book-now {
     @include grid-container;
-    margin-top: 35px;
+    margin-top: 5px;
     text-align: center;
     padding-bottom: 20px;
 
@@ -35,7 +87,7 @@
         text-align: right;
         padding-bottom: 0;
     }
-
+    
     a {
         color: $dandelion;
         text-decoration: none;
