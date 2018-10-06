@@ -4,10 +4,17 @@
     ul {
         @include grid-container;
 		list-style: none;
-		// display: none;
 
 		@include grid-media($tablet-landscape) {
 			display: inline-block;
+		}
+		
+		> li {
+			+ li {
+				@include grid-media($tablet-landscape) {
+					border-left: 1px solid $ash;
+				}
+			}
 		}
 
 		ul {
@@ -39,9 +46,6 @@
 			}
 
 			li {
-				float: none;
-    			display: block;
-
 				+ li {
 					padding-top: 15px;
 				}
@@ -93,14 +97,6 @@
 			color: #fff;
 		}
 	}
-
-// 	.nav-menu {
-// 		.sub-menu {
-// 			.sub-menu {
-// 				margin-top: -33px;
-// 			}
-// 		}
-// 	}
 
 	.nav-menu {
 		display: none;
