@@ -118,6 +118,13 @@
 	}
 }
 
+.nav-menu {
+	@include grid-media($tablet-landscape) {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+}
+
 .menu-primary-container {
 	padding-bottom: 20px;
 
