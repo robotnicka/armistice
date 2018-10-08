@@ -1,0 +1,85 @@
+// Booking
+
+.booking-footer {
+    margin-top: 30px;
+    background-color: $charcoal;
+    padding-top: 50px;
+    text-align: center;
+    
+    @include grid-media($tablet-landscape) {
+        padding-top: 130px;
+    }
+    
+    &__heading {
+        color: $blush;
+        font-size: 34px;
+        margin-right: 2%;
+        margin-bottom: 0;
+        margin-left: 2%;
+    }
+    
+    &__button {
+        display: inline-block;
+        margin-top: 70px;
+        padding-top: 27px;
+        padding-right: 82px;
+        padding-bottom: 27px;
+        padding-left: 82px;
+        color: $dandelion;
+        font-family: $josie;
+        text-transform: uppercase;
+        font-size: 24px;
+        border: 5px solid $dandelion;
+        text-decoration: none;
+        position: relative;
+        
+        &::before {
+            position: absolute;
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
+            display: inline-block;
+            content: '';
+            border-top: 1px solid $dandelion;
+            border-left: 1px solid $dandelion;
+            top: 5px;
+            left: 5px;
+            transition: height .2s ease-in-out, width .2s ease-in-out .2s, opacity .2s ease-in-out .4s;
+        }
+        
+        &::after {
+            position: absolute;
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
+            display: inline-block;
+            content: '';
+            border-right: 1px solid $dandelion;
+            border-bottom: 1px solid $dandelion;
+            bottom: 5px;
+            right: 5px;
+            transition: height .2s ease-in-out .2s, width .2s ease-in-out, opacity .2s ease-in-out .4s;
+        } 
+        
+        &:hover {
+            color: $dark-dandelion;
+            
+            &::before {
+                height: 0;
+                width: 0;
+                opacity: 0;
+            }
+            
+            &::after {
+                height: 0;
+                width: 0;
+                opacity: 0;
+            }
+        }
+    }
+    
+    &__graphic {
+        margin-top: 14px;
+        width: 188px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

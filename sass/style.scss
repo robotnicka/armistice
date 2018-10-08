@@ -1,5 +1,5 @@
 /*!
-Theme Name: Peculiar Crossroads
+Theme Name: Armistice Arcane
 Theme URI: http://www.emilymentrek.com
 Author: Emily Mentrek
 Author URI: http://www.emilymentrek.com
@@ -21,6 +21,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import 'grid-settings';
 @import 'normalize';
 @import 'form';
+@import 'header';
 @import 'menu';
+@import 'media';
+@import 'testimonials';
+@import 'booking';
+@import 'sponsors';
 @import 'footer';
 @import 'other';

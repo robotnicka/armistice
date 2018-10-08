@@ -1,0 +1,53 @@
+// Sponsors section
+
+.sponsors-footer {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    text-align: center;
+    background-color: $charcoal;
+    
+    @include grid-media($tablet-landscape) {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+    
+    &__heading {
+        font-size: 24px;
+        color: $blush;
+    }
+    
+    a {
+        color: $dandelion;
+        font-family: $josie;
+        text-decoration: none;
+        
+        &:hover {
+            color: $dark-dandelion;
+        }
+    }
+    
+    li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 18px;
+        
+        + li {
+            position: relative;
+            
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 100%;
+                left: -14px;
+                background-color: $ash;
+                position: absolute;
+            }
+        }
+    }
+    
+    ul {
+        padding: 0;
+    }
+}
