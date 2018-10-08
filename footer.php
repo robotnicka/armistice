@@ -12,42 +12,36 @@
 ?>
 
 	</div><!-- #content -->
+	<?php
+	if ( is_front_page() ) : 
+		include ('inc/front-page-footer.php');	
+	endif;
+	?>
+	<div class="booking-footer">
+		<h1 class="booking-footer__heading">Are you ready for an unforgettable weekend?</h1>
+		<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Apply' ) ) ); ?>" class="booking-footer__button">Book now</a>
+		<div class="booking-footer__graphic">
+			<?php include('images/footer-flourish.php'); ?>
+		</div>
+	</div>
 	<div class="sponsors-footer">
-		<h2>Support our sponsors!</h2>
+		<h2 class="sponsors-footer__heading">Support our benefactors!</h2>
 		<ul>
-			<li><a href="https://auntsallys.com/" target="_blank" rel="noopener">Aunt Sally’s</a></li>
-			<li><a href="https://www.historicalemporium.com/" target="_blank" rel="noopener">Historical Emporium</a></li>
-			<li><a href="http://cosmangacraft.com/news/detail/collectible-cards-now-also-for-larpers?page=1" target="_blank" rel="noopener">Cosmangacraft.com</a></li>
+			<li><a href="https://auntsallys.com/" target="_blank">Aunt Sally’s</a></li>
+			<li><a href="https://www.historicalemporium.com/" target="_blank">Historical Emporium</a></li>
+			<li><a href="http://cosmangacraft.com/news/detail/collectible-cards-now-also-for-larpers?page=1" target="_blank">Cosmangacraft.com</a></li>
 		</ul>
 	</div>
-	<?php
-	if ( is_front_page() ) : ?>
-	<div class="row">
-		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/frannyryan.jpg"/></div></div>
-		<div class="block text date"><div><hr><p><?php echo get_theme_mod( 'armistice_date_text', 'default_value' ); ?></p>
-		<p><em><?php echo get_theme_mod( 'armistice_location_text', 'default_value' ); ?></em></p><hr></div></div>
-		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic2.jpg"/></div></div>
-			<div class="block text light"><div><p>“THE ATTENTION TO DETAIL AND RELATIONSHIPS BETWEEN CHARACTERS CAUSE IT TO STAND APART FROM OTHER EVENTS!”</p>— ROBERT</div></div></div>
-	<div class="row">
-
-		<div class="block text"><div><p>“THEY OFFER AN INTRIGUING, FUN EXPERIENCE FOR BOTH THE EXPERIENCED ROLEPLAYER OR THE TRUE  REDSHIRT BEGINNER.”</p>— BRANTLY</div></div>
-		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic4.jpg"/></div></div>
-		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic5.jpg"/></div></div>
-		<div class="block"><div class="pic pic-1"><img src="/wp-content/themes/armistice/images/pic3.jpg"/></div></div>
-
-	</div>
-	<?php endif;
-	?>
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '&copy; %1$s | Website by %2$s.', 'armistice' ), 'Armistice Arcane and <a href="http://peculiarcrossroads.com" target="_blank"  rel="noopener">Peculiar Crossroads Productions</a>', '<a href="http://emilymentrek.com/" target="_blank">Emily</a>' );
+				printf( esc_html__( '&copy; %1$s | Website by %2$s.', 'armistice' ), 'ARMISTICE ARCANE and <a href="http://peculiarcrossroads.com" target="_blank">PECULIAR CROSSROADS PRODUCTIONS</a>', '<a href="http://emilymentrek.com/" target="_blank">Emily</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <?php wp_footer(); ?>
 
 </body>

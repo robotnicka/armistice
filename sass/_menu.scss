@@ -1,5 +1,6 @@
 .main-navigation {
     @include grid-container;
+    background-color: #292629;
 
     ul {
         @include grid-container;
@@ -8,14 +9,6 @@
 		@include grid-media($tablet-landscape) {
 			display: inline-block;
 		}
-		
-		> li {
-			+ li {
-				@include grid-media($tablet-landscape) {
-					border-left: 1px solid $ash;
-				}
-			}
-		}
 
 		ul {
 			background-color: $charcoal;
@@ -23,6 +16,8 @@
 			padding-right: 29px;
 			padding-left: 29px;
 			margin-left: -29px;
+			opacity: 0;
+    		transition: opacity .2s ease-in;
 
 			@include grid-media($tablet-landscape) {
 				float: left;
@@ -64,19 +59,12 @@
 					width: 200px;
 				}
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+			opacity: 1;
 		}
 	}
 
@@ -88,9 +76,20 @@
     		float: left;
 		}
 	}
+	
+	.sub-menu {
+		li {
+			display: block;
+			margin-left: 12px;
+			
+			@include grid-media($tablet-landscape) {
+	    		float: none;
+	    		margin-left: 0;
+			}
+		}
+	}
 
 	a {
-		//display: block;
 		text-decoration: none;
 
 		&:hover {
@@ -108,14 +107,47 @@
 		@include grid-media($tablet-landscape) {
 			display: inline-block;
 		}
+		
+		> li {
+			+ li {
+				position: relative;
+				
+				&::before {
+					@include grid-media($tablet-landscape) {
+						position: absolute;
+						display: inline-block;
+						content: '';
+						width: 1px;
+						height: 100%;
+						left: -20px;
+						border-left: 1px solid $ash;
+					}
+				}
+			}
+		}
 	}
+}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
 
+.admin-bar {
+	.sticky {
+		padding-top: 32px;
 	}
+}
+
+.sticky-active.site-content {
+  padding-top: 90px;
+  
+  @include grid-media($tablet-landscape) {
+	padding-top: 67px;
+  }
 }
 
 .nav-menu {

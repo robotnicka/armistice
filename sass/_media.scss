@@ -1,0 +1,52 @@
+// Media styles
+
+.media-highlight {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 47px;
+    padding-bottom: 22px;
+    border-top: 1px solid $charcoal;
+    border-bottom: 1px solid $charcoal;
+    font-family: $standard;
+    font-style: italic;
+    line-height: 44px;
+    
+    @include grid-media($tablet) {
+        width: 80%;
+    }
+    
+    @include grid-media($tablet-landscape) {
+        margin-top: 115px;
+        margin-bottom: 185px;
+        width: 60%;
+        font-size: 46px;
+    }
+    
+    &__more {
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    
+    .media-highlight__more {
+        a {
+            color: $mint;
+            
+            &:hover {
+                color: $glass;
+            }
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        color: $charcoal;
+        
+        &:hover {
+            color: $ash;
+        }
+    }
+}

@@ -1,12 +1,58 @@
-.site-info {
-    text-transform: uppercase;
-}
-
 .date-container {
     font-family: $standard;
     text-align: center;
-    font-size: 30px;
+    font-size: 16px;
     margin: 30px 20px;
+    
+    @include grid-media($tablet) {
+        font-size: 22px;
+    }
+    
+    @include grid-media($desktop) {
+        font-size: 30px;
+    }
+    
+    &__divider {
+        display: none;
+        
+        @include grid-media($tablet-landscape) {
+            display: inline;
+        }
+    }
+    
+    &__date {
+        display: block;
+        
+        @include grid-media($tablet-landscape) {
+            display: inline-block;
+        }
+    }
+    
+    &__icon {
+        display: inline-block;
+        height: 28px;
+        width: 28px;
+        vertical-align: middle;
+        opacity: .8;
+        
+        @include grid-media($tablet-landscape) {
+            height: 48px;
+            width: 48px;
+        }
+        
+        @include grid-media($desktop) {
+            height: 58px;
+            width: 58px;
+        }
+        
+        &--chron-1 {
+            margin-right: 10px;
+        }
+        
+        &--chron-2 {
+            margin-left: 10px;
+        }
+    }
 }
 
 .wp-custom-header iframe,
@@ -15,31 +61,6 @@
 	display: block;
 	height: auto;
 	max-width: 100%;
-}
-
-.sponsors-footer {
-    border-bottom: 1px solid $robin-egg;
-    padding-bottom: 20px;
-    margin-top: 30px;
-    padding-top: 30px;
-    text-align: center;
-    background-color: $charcoal;
-
-    h2 {
-        font-size: 24px;
-        color: $blush;
-    }
-
-    ul {
-        padding: 0;
-
-        li {
-            list-style-type: none;
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 18px;
-        }
-    }
 }
 
 img.alignleft {
@@ -80,6 +101,7 @@ img.alignleft {
 
 #wp-a11y-speak-polite {
     visibility: hidden;
+    font-size: 0;
 }
 
 .video-container {
@@ -176,6 +198,7 @@ h4 {
     font-weight: normal;
 }
 
+h1.page-title,
 h1.entry-title {
     position: relative;
     font-family: $standard;
@@ -207,26 +230,50 @@ h1.entry-title {
     margin-top: 156px;
 }
 
-.button-book-now {
-    display: inline-block;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out;
-    // border: 3px solid $dandelion;
-    background-color: #b91010;
-    padding: 20px 40px;
-    color: #fff;
-    font-family: $josie;
-    font-weight: normal;
-    text-transform: uppercase;
-    font-size: 16px;
-
-    @include grid-media($tablet-landscape) {
-        margin-right: 75px;
+.post-navigation {
+    @include grid-container;
+    margin-top: 100px;
+    
+    .nav-previous,
+    .nav-next {
+        width: 50%;
+        float: left;
     }
+    
+    .nav-next {
+        text-align: right;
+    }
+}
 
-    &:hover {
-        // border: 3px solid $dark-dandelion;
-        background-color: #da2e2e;
-        color: #fff;
+.blog {
+    .entry-header {
+        margin-top: 0;
+    }
+    
+    .page-title {
+        margin-top: 156px;
+    }
+    
+    .post {
+        + .post {
+            margin-top: 60px;
+            padding-bottom: 30px;
+            border-top: 1px solid $charcoal;
+        }
+    }
+}
+
+.big-flourish-container {
+    display: block;
+    width: 202px;
+    height: 53px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    
+    @include grid-media($tablet-landscape) {
+        width: 404px;
+        height: 105px;    
     }
 }
 
@@ -270,6 +317,10 @@ h1.entry-title {
 
 a {
     color: $mint;
+    
+    &:hover {
+        color: $glass;
+    }
 }
 
 .block.text {
