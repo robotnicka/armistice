@@ -4,6 +4,8 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
+ /* global jQuery */
+ var j
 ( function() {
 	var container, button, menu, links, i, len;
 
@@ -103,4 +105,39 @@
 			}
 		}
 	}( container ) );
+	
+	(function($) {
+	  $(document).ready(function(){
+	    $('.testimonial').slick({
+	    	slidesToShow: 1,
+		    slidesToScroll: 1,
+		    autoplay: true,
+		    autoplaySpeed: 8000,
+		    arrows: true,
+		    prevArrow: '<button type="button" class="slick-prev"><</button>',
+		    nextArrow: '<button type="button" class="slick-next">></button>',
+		});
+	 });
+	}(jQuery));
 } )();
+
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("site-navigation");
+var siteContent = document.getElementById('content');
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+	if (window.pageYOffset > sticky) {
+		header.classList.add("sticky");
+		siteContent.classList.add("sticky-active");
+	} else {
+		header.classList.remove("sticky");
+		siteContent.classList.remove("sticky-active");
+	}
+}
