@@ -1,7 +1,7 @@
 /*!
 Theme Name: Armistice Arcane
 Theme URI: http://www.emilymentrek.com
-Author: Emily Mentrek
+Author: Emily Terranova
 Author URI: http://www.emilymentrek.com
 Description: A custom theme for the Armistice Arcane games, lovingly built for Peculiar Crossroads Productions by Emily Mentrek.
 Version: 1.0.0
@@ -16,16 +16,15 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
-@import "neat";
-@import 'variables';
-@import 'grid-settings';
-@import 'normalize';
-@import 'form';
-@import 'header';
-@import 'menu';
-@import 'media';
-@import 'testimonials';
-@import 'booking';
-@import 'sponsors';
-@import 'footer';
-@import 'other';
+@use "variables/variables";
+@use "grid-settings";
+@use "normalize";
+@use "form";
+@use "header";
+@use "menu";
+@use "media";
+@use "testimonials";
+@use "booking";
+@use "sponsors";
+@use "footer";
+@use "other";
